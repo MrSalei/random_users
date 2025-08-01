@@ -8,39 +8,38 @@
 import Foundation
 import Moya
 
-enum UserServices {
+public enum UserServices {
     case userList(userCount: Int)
 }
 
 extension UserServices: TargetType {
-    var baseURL: URL {
+    public var baseURL: URL {
         return URL(string: "https://randomuser.me/api")!
     }
 
-    var path: String {
+    public var path: String {
         return "/"
     }
 
-    var method: Moya.Method {
+    public var method: Moya.Method {
         .get
     }
 
-    var sampleData: Data {
+    public var sampleData: Data {
         switch self {
         default:
             return "Half measures are as bad as nothing at all.".data(using: String.Encoding.utf8)!
         }
     }
 
-    var task: Task {
+    public var task: Task {
         switch self {
         case let .userList(userCount):
             return .requestParameters(parameters: ["results": userCount], encoding:  URLEncoding.queryString)
         }
     }
 
-    var headers: [String: String]? {
+    public var headers: [String: String]? {
         nil
     }
-
 }

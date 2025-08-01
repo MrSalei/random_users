@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4035D3292E3D26A100DB14C3 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3282E3D269D00DB14C3 /* UserListViewModel.swift */; };
+		4035D3D52E3D2A3100DB14C3 /* ScreensDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3D42E3D2A2B00DB14C3 /* ScreensDependencyContainer.swift */; };
+		4035D3D72E3D2AE100DB14C3 /* UserListViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3D62E3D2ADB00DB14C3 /* UserListViewControllerView.swift */; };
 		4BBC588226EF9124008B623D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC588126EF9124008B623D /* AppDelegate.swift */; };
 		4BBC588426EF9124008B623D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC588326EF9124008B623D /* SceneDelegate.swift */; };
-		4BBC588926EF9124008B623D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC588726EF9124008B623D /* Main.storyboard */; };
 		4BBC588B26EF9125008B623D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC588A26EF9125008B623D /* Assets.xcassets */; };
 		4BBC588E26EF9125008B623D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC588C26EF9125008B623D /* LaunchScreen.storyboard */; };
 		4BBC589926EF9125008B623D /* RandomUsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC589826EF9125008B623D /* RandomUsersTests.swift */; };
@@ -45,11 +47,13 @@
 		08348AFD7A47B16ED1A73812 /* Pods-RandomUsersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUsersTests.debug.xcconfig"; path = "Target Support Files/Pods-RandomUsersTests/Pods-RandomUsersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		39AB434B8423E43DA3171CCF /* Pods_RandomUsers_RandomUsersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUsers_RandomUsersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFC8FDFC38C1FE5EDB08F19 /* Pods-RandomUsersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUsersTests.release.xcconfig"; path = "Target Support Files/Pods-RandomUsersTests/Pods-RandomUsersTests.release.xcconfig"; sourceTree = "<group>"; };
+		4035D3282E3D269D00DB14C3 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		4035D3D42E3D2A2B00DB14C3 /* ScreensDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensDependencyContainer.swift; sourceTree = "<group>"; };
+		4035D3D62E3D2ADB00DB14C3 /* UserListViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewControllerView.swift; sourceTree = "<group>"; };
 		4B6DCA743612DA66D926C575 /* Pods-RandomUsers-RandomUsersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUsers-RandomUsersUITests.release.xcconfig"; path = "Target Support Files/Pods-RandomUsers-RandomUsersUITests/Pods-RandomUsers-RandomUsersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4BBC587E26EF9124008B623D /* RandomUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBC588126EF9124008B623D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BBC588326EF9124008B623D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BBC588826EF9124008B623D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BBC588A26EF9125008B623D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BBC588D26EF9125008B623D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BBC588F26EF9125008B623D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +101,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4035D3242E3D265F00DB14C3 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				4035D3272E3D268000DB14C3 /* Presentation */,
+				4035D3262E3D267C00DB14C3 /* View */,
+				4035D3252E3D266400DB14C3 /* Controller */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		4035D3252E3D266400DB14C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BBC58DC26EF9DA9008B623D /* UserListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4035D3262E3D267C00DB14C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4035D3D62E3D2ADB00DB14C3 /* UserListViewControllerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4035D3272E3D268000DB14C3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4035D3282E3D269D00DB14C3 /* UserListViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		4262AD90331CD968CF8B41DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +174,7 @@
 				4BBC58BE26EF930C008B623D /* Provider */,
 				4BBC588126EF9124008B623D /* AppDelegate.swift */,
 				4BBC588326EF9124008B623D /* SceneDelegate.swift */,
-				4BBC588726EF9124008B623D /* Main.storyboard */,
+				4035D3D42E3D2A2B00DB14C3 /* ScreensDependencyContainer.swift */,
 				4BBC588A26EF9125008B623D /* Assets.xcassets */,
 				4BBC588C26EF9125008B623D /* LaunchScreen.storyboard */,
 				4BBC588F26EF9125008B623D /* Info.plist */,
@@ -191,7 +229,7 @@
 		4BBC58DB26EF9D63008B623D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4BBC58DC26EF9DA9008B623D /* UserListViewController.swift */,
+				4035D3242E3D265F00DB14C3 /* UserList */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -319,7 +357,6 @@
 			files = (
 				4BBC588E26EF9125008B623D /* LaunchScreen.storyboard in Resources */,
 				4BBC588B26EF9125008B623D /* Assets.xcassets in Resources */,
-				4BBC588926EF9124008B623D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,9 +407,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RandomUsers/Pods-RandomUsers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RandomUsers/Pods-RandomUsers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -409,9 +450,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RandomUsers-RandomUsersUITests/Pods-RandomUsers-RandomUsersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RandomUsers-RandomUsersUITests/Pods-RandomUsers-RandomUsersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -447,8 +492,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4035D3D52E3D2A3100DB14C3 /* ScreensDependencyContainer.swift in Sources */,
+				4035D3D72E3D2AE100DB14C3 /* UserListViewControllerView.swift in Sources */,
 				4BBC58DD26EF9DA9008B623D /* UserListViewController.swift in Sources */,
 				4BBC58C026EF9342008B623D /* UserServices.swift in Sources */,
+				4035D3292E3D26A100DB14C3 /* UserListViewModel.swift in Sources */,
 				4BBC58CB26EF95AF008B623D /* UserProvider.swift in Sources */,
 				4BBC58C526EF953A008B623D /* UserProviderProtocol.swift in Sources */,
 				4BBC588226EF9124008B623D /* AppDelegate.swift in Sources */,
@@ -488,14 +536,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4BBC588726EF9124008B623D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4BBC588826EF9124008B623D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4BBC588C26EF9125008B623D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

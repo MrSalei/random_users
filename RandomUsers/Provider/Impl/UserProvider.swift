@@ -8,16 +8,21 @@
 import Foundation
 import Moya
 
-class UserProvider: UserProviderProtocol {
+public final class UserProvider {
+    
     private let service: MoyaProvider<UserServices>
     
     init(service: MoyaProvider<UserServices>) {
         self.service = service
     }
+}
+
+// MARK: - UserProvider
+extension UserProvider: UserProviderProtocol {
     
-    func listOfUsers(userCount: Int) {
+    public func listOfUsers(userCount: Int) {
         service.request(.userList(userCount: userCount)) { result in
-            switch result{
+            switch result {
             case .success(let response):
                 //                parse and return data
                 break
@@ -27,6 +32,4 @@ class UserProvider: UserProviderProtocol {
             }
         }
     }
-    
-    
 }

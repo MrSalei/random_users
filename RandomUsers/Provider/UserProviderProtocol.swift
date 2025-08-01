@@ -8,6 +8,6 @@
 import Foundation
 import Moya
 
-protocol UserProviderProtocol {
+public protocol UserProviderProtocol {
     func listOfUsers(userCount: Int)
 }
