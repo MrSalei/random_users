@@ -7,6 +7,7 @@ target 'RandomUsers' do
 
   # Pods for RandomUsers
   pod 'Moya', '~> 13.0.1'
+  pod 'SDWebImage'
 
   target 'RandomUsersTests' do
     inherit! :search_paths

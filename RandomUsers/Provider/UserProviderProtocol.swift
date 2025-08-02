@@ -9,5 +9,8 @@ import Foundation
 import Moya
 
 public protocol UserProviderProtocol {
-    func listOfUsers(userCount: Int)
+    func listOfUsers(
+        userCount: Int,
+        completion: @escaping (Result<[RandomUser], Error>) -> Void
+    )
 }
