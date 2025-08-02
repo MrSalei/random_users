@@ -10,6 +10,22 @@ import RandomUsers
 
 final class UserProviderSpy {
     
+    var template: RandomUsers.RandomUser {
+        let coordinates = RandomUsers.RandomUser.Coordinates(
+            latitude: "0.05",
+            longitude: "0.04"
+        )
+        
+        let user = RandomUsers.RandomUser(
+            fullName: "someFullName",
+            email: "someEmail",
+            coordinates: coordinates,
+            thumbnail: "someThumbnail"
+        )
+        
+        return user
+    }
+    
     private(set) var userRequestCount = 0
     private var completion: ((Result<[RandomUsers.RandomUser], any Error>) -> Void)?
     
@@ -35,20 +51,8 @@ extension UserProviderSpy {
     }
     
     private func prepareUsers() -> [RandomUsers.RandomUser] {
-        let coordinates = RandomUsers.RandomUser.Coordinates(
-            latitude: "0.05",
-            longitude: "0.04"
-        )
-        
-        let user = RandomUsers.RandomUser(
-            fullName: "someFullName",
-            email: "someEmail",
-            coordinates: coordinates,
-            thumbnail: "someThumbnail"
-        )
-        
         let usersArray = Array(
-            repeating: user,
+            repeating: template,
             count: userRequestCount
         )
         

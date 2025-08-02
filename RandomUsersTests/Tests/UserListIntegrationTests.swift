@@ -62,6 +62,19 @@ final class UserListIntegrationTests: XCTestCase {
         XCTAssertEqual(numberOfRows, spy.userRequestCount)
     }
     
+    func test_sut_displaysCorrectDataInCells() throws {
+        let spy = UserProviderSpy()
+        let sut = makeSUT(provider: spy)
+        let tableView = getUsersTableView(from: sut)
+        
+        sut.loadViewIfNeeded()
+        spy.completeListOfUsersSuccessfully()
+        
+        let data = retrieveCellData(sut: sut, tableView: tableView)
+        XCTAssertEqual(spy.template.fullName, data.0)
+        XCTAssertEqual(spy.template.email, data.1)
+    }
+    
     func test_sut_doesnotCallProviderOnLastCellNotDisplayed() throws {
         let mock = UserProviderMock()
         let spy = UserProviderSpy(decoratee: mock)
@@ -115,6 +128,29 @@ final class UserListIntegrationTests: XCTestCase {
 
 // MARK: - HELPERS
 extension UserListIntegrationTests {
+    
+    private func retrieveCellData(
+        sut: UserListViewController,
+        tableView: UITableView?
+    ) -> (String?, String?) {
+        let indexPath = IndexPath(
+            row: 0,
+            section: 0
+        )
+        
+        if let tableView, let cell = sut.tableView(tableView, cellForRowAt: indexPath) as? UserTableViewCell {
+            let mirror = Mirror(
+                reflecting: cell
+            )
+            
+            let fullName = (mirror.descendant("nameLabel") as? UILabel)?.text
+            let email = (mirror.descendant("emailLabel") as? UILabel)?.text
+            
+            return (fullName, email)
+        } else {
+            return (nil, nil)
+        }
+    }
     
     private func simulateCellTap(
         sut: UserListViewController,
