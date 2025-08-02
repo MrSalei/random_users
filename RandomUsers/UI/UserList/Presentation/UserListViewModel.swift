@@ -15,16 +15,20 @@ private struct Constants {
 public final class UserListViewModel {
     
     private(set) var randomUsersLoadedSender = PassthroughSubject<Void, Never>()
-    private(set) var errorSender = PassthroughSubject<String, Never>()
     
     private(set) var storedUsers = [RandomUser]()
     
     public var usersAreLoading = true
     
     private let provider: UserProviderProtocol
+    private let alertPresenter: AlertPresenterProtocol
     
-    public init(provider: UserProviderProtocol) {
+    public init(
+        provider: UserProviderProtocol,
+        alertPresenter: AlertPresenterProtocol
+    ) {
         self.provider = provider
+        self.alertPresenter = alertPresenter
     }
     
     public func loadUsers() {
@@ -45,10 +49,26 @@ public final class UserListViewModel {
                     return
                 }
                 
-                self?.errorSender.send(userError.description)
+                self?.displayAlert(
+                    with: userError.description
+                )
             }
             
             self?.usersAreLoading = false
+        }
+    }
+}
+
+// MARK: - HELPERS
+extension UserListViewModel {
+    
+    private func displayAlert(
+        with message: String
+    ) {
+        alertPresenter.presentAlert(
+            with: message
+        ) { [weak self] in
+            self?.loadUsers()
         }
     }
 }

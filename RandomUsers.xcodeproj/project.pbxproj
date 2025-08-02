@@ -14,6 +14,14 @@
 		4035D3DC2E3D5FE300DB14C3 /* RandomUserListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3DB2E3D5FDE00DB14C3 /* RandomUserListResult.swift */; };
 		4035D3DE2E3D683000DB14C3 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3DD2E3D682B00DB14C3 /* UserTableViewCell.swift */; };
 		4035D3E32E3DBA9C00DB14C3 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3E22E3DBA9500DB14C3 /* LocationView.swift */; };
+		4035D3E62E3DCC5200DB14C3 /* XCTestCase+MemoryLeaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3E52E3DCC4C00DB14C3 /* XCTestCase+MemoryLeaks.swift */; };
+		4035D3E92E3DCF3200DB14C3 /* UserListIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3E82E3DCF2900DB14C3 /* UserListIntegrationTests.swift */; };
+		4035D3EB2E3DD18200DB14C3 /* UserProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3EA2E3DD17A00DB14C3 /* UserProviderMock.swift */; };
+		4035D3ED2E3DD4FD00DB14C3 /* UserProviderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3EC2E3DD4F400DB14C3 /* UserProviderSpy.swift */; };
+		4035D3F32E3DDB8A00DB14C3 /* AlertPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3F22E3DDB8500DB14C3 /* AlertPresenterProtocol.swift */; };
+		4035D3F52E3DDB9000DB14C3 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3F42E3DDB8D00DB14C3 /* AlertPresenter.swift */; };
+		4035D3FC2E3DDFC900DB14C3 /* AlertPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3FB2E3DDFC300DB14C3 /* AlertPresenterSpy.swift */; };
+		4035D3FE2E3DE0ED00DB14C3 /* AlertPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3FD2E3DE0E900DB14C3 /* AlertPresenterMock.swift */; };
 		4BBC588226EF9124008B623D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC588126EF9124008B623D /* AppDelegate.swift */; };
 		4BBC588426EF9124008B623D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC588326EF9124008B623D /* SceneDelegate.swift */; };
 		4BBC588B26EF9125008B623D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC588A26EF9125008B623D /* Assets.xcassets */; };
@@ -58,6 +66,14 @@
 		4035D3DB2E3D5FDE00DB14C3 /* RandomUserListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserListResult.swift; sourceTree = "<group>"; };
 		4035D3DD2E3D682B00DB14C3 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		4035D3E22E3DBA9500DB14C3 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		4035D3E52E3DCC4C00DB14C3 /* XCTestCase+MemoryLeaks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeaks.swift"; sourceTree = "<group>"; };
+		4035D3E82E3DCF2900DB14C3 /* UserListIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListIntegrationTests.swift; sourceTree = "<group>"; };
+		4035D3EA2E3DD17A00DB14C3 /* UserProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProviderMock.swift; sourceTree = "<group>"; };
+		4035D3EC2E3DD4F400DB14C3 /* UserProviderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProviderSpy.swift; sourceTree = "<group>"; };
+		4035D3F22E3DDB8500DB14C3 /* AlertPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterProtocol.swift; sourceTree = "<group>"; };
+		4035D3F42E3DDB8D00DB14C3 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		4035D3FB2E3DDFC300DB14C3 /* AlertPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterSpy.swift; sourceTree = "<group>"; };
+		4035D3FD2E3DE0E900DB14C3 /* AlertPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterMock.swift; sourceTree = "<group>"; };
 		4B6DCA743612DA66D926C575 /* Pods-RandomUsers-RandomUsersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUsers-RandomUsersUITests.release.xcconfig"; path = "Target Support Files/Pods-RandomUsers-RandomUsersUITests/Pods-RandomUsers-RandomUsersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4BBC587E26EF9124008B623D /* RandomUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBC588126EF9124008B623D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +170,60 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4035D3E42E3DCC4600DB14C3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4035D3FD2E3DE0E900DB14C3 /* AlertPresenterMock.swift */,
+				4035D3FB2E3DDFC300DB14C3 /* AlertPresenterSpy.swift */,
+				4035D3EC2E3DD4F400DB14C3 /* UserProviderSpy.swift */,
+				4035D3EA2E3DD17A00DB14C3 /* UserProviderMock.swift */,
+				4035D3E52E3DCC4C00DB14C3 /* XCTestCase+MemoryLeaks.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4035D3E72E3DCF1800DB14C3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4035D3E82E3DCF2900DB14C3 /* UserListIntegrationTests.swift */,
+				4BBC589826EF9125008B623D /* RandomUsersTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		4035D3EE2E3DDB5200DB14C3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4035D3EF2E3DDB5900DB14C3 /* AlertPresenter */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4035D3EF2E3DDB5900DB14C3 /* AlertPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				4035D3F12E3DDB7D00DB14C3 /* Implementation */,
+				4035D3F02E3DDB7700DB14C3 /* Abstraction */,
+			);
+			path = AlertPresenter;
+			sourceTree = "<group>";
+		};
+		4035D3F02E3DDB7700DB14C3 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				4035D3F22E3DDB8500DB14C3 /* AlertPresenterProtocol.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		4035D3F12E3DDB7D00DB14C3 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				4035D3F42E3DDB8D00DB14C3 /* AlertPresenter.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
 		4262AD90331CD968CF8B41DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +274,8 @@
 		4BBC589726EF9125008B623D /* RandomUsersTests */ = {
 			isa = PBXGroup;
 			children = (
-				4BBC589826EF9125008B623D /* RandomUsersTests.swift */,
+				4035D3E72E3DCF1800DB14C3 /* Tests */,
+				4035D3E42E3DCC4600DB14C3 /* Helpers */,
 				4BBC589A26EF9125008B623D /* Info.plist */,
 			);
 			path = RandomUsersTests;
@@ -249,6 +320,7 @@
 		4BBC58DB26EF9D63008B623D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4035D3EE2E3DDB5200DB14C3 /* Helpers */,
 				4035D3242E3D265F00DB14C3 /* UserList */,
 			);
 			path = UI;
@@ -561,6 +633,8 @@
 				4035D3DC2E3D5FE300DB14C3 /* RandomUserListResult.swift in Sources */,
 				4BBC58DD26EF9DA9008B623D /* UserListViewController.swift in Sources */,
 				4035D3DE2E3D683000DB14C3 /* UserTableViewCell.swift in Sources */,
+				4035D3F52E3DDB9000DB14C3 /* AlertPresenter.swift in Sources */,
+				4035D3F32E3DDB8A00DB14C3 /* AlertPresenterProtocol.swift in Sources */,
 				4BBC58C026EF9342008B623D /* UserServices.swift in Sources */,
 				4035D3292E3D26A100DB14C3 /* UserListViewModel.swift in Sources */,
 				4BBC58CB26EF95AF008B623D /* UserProvider.swift in Sources */,
@@ -576,7 +650,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4035D3FE2E3DE0ED00DB14C3 /* AlertPresenterMock.swift in Sources */,
+				4035D3E62E3DCC5200DB14C3 /* XCTestCase+MemoryLeaks.swift in Sources */,
+				4035D3EB2E3DD18200DB14C3 /* UserProviderMock.swift in Sources */,
+				4035D3FC2E3DDFC900DB14C3 /* AlertPresenterSpy.swift in Sources */,
 				4BBC589926EF9125008B623D /* RandomUsersTests.swift in Sources */,
+				4035D3E92E3DCF3200DB14C3 /* UserListIntegrationTests.swift in Sources */,
+				4035D3ED2E3DD4FD00DB14C3 /* UserProviderSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +858,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y97YKW5885;
 				INFOPLIST_FILE = RandomUsersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -800,6 +881,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y97YKW5885;
 				INFOPLIST_FILE = RandomUsersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -821,6 +903,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y97YKW5885;
 				INFOPLIST_FILE = RandomUsersUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -841,6 +924,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y97YKW5885;
 				INFOPLIST_FILE = RandomUsersUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

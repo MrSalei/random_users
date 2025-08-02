@@ -50,53 +50,11 @@ extension UserListViewController {
             .store(
                 in: &cancellables
             )
-        
-        viewModel.errorSender
-            .receive(
-                on: DispatchQueue.main
-            )
-            .sink { [weak self] error in
-                self?.showAlert(
-                    with: error
-                )
-            }
-            .store(
-                in: &cancellables
-            )
     }
     
     private func setupDelegates() {
         contentView.usersTableView.dataSource = self
         contentView.usersTableView.delegate = self
-    }
-}
-
-// MARK: - NAVIGATION HELPERS
-extension UserListViewController {
-    
-    func showAlert(
-        with message: String
-    ) {
-        let alert = UIAlertController(
-            title: "Alert",
-            message: message,
-            preferredStyle: .alert
-        )
-        
-        let retryAction = UIAlertAction(
-            title: "Retry",
-            style: .default
-        ) { [weak self] _ in
-            self?.viewModel.loadUsers()
-        }
-        
-        alert.addAction(retryAction)
-        
-        present(
-            alert,
-            animated: true,
-            completion: nil
-        )
     }
 }
 

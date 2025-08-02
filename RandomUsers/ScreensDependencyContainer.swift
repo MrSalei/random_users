@@ -19,13 +19,18 @@ final class ScreensDependencyContainer {
             service: service
         )
         
+        let alertPresenter = AlertPresenter()
+        
         let viewModel = UserListViewModel(
-            provider: provider
+            provider: provider,
+            alertPresenter: alertPresenter
         )
         
         let vc = UserListViewController(
             viewModel: viewModel
         )
+        
+        alertPresenter.presentedViewController = vc
         
         return vc
     }

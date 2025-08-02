@@ -18,6 +18,11 @@ public struct RandomUser: Decodable {
     public struct Coordinates: Decodable {
         public let latitude: String
         public let longitude: String
+        
+        public init(latitude: String, longitude: String) {
+            self.latitude = latitude
+            self.longitude = longitude
+        }
     }
     
     public struct Location: Decodable {
@@ -70,5 +75,17 @@ public struct RandomUser: Decodable {
         )
         
         self.thumbnail = picture.thumbnail
+    }
+    
+    public init(
+        fullName: String,
+        email: String,
+        coordinates: Coordinates,
+        thumbnail: String
+    ) {
+        self.fullName = fullName
+        self.email = email
+        self.coordinates = coordinates
+        self.thumbnail = thumbnail
     }
 }
