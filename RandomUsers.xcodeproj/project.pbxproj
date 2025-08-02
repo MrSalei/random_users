@@ -13,7 +13,7 @@
 		4035D3DA2E3D5C3F00DB14C3 /* RandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3D92E3D5C3B00DB14C3 /* RandomUser.swift */; };
 		4035D3DC2E3D5FE300DB14C3 /* RandomUserListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3DB2E3D5FDE00DB14C3 /* RandomUserListResult.swift */; };
 		4035D3DE2E3D683000DB14C3 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3DD2E3D682B00DB14C3 /* UserTableViewCell.swift */; };
-		4035D3E12E3D96EA00DB14C3 /* UserListVM+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3E02E3D96E600DB14C3 /* UserListVM+Navigation.swift */; };
+		4035D3E32E3DBA9C00DB14C3 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035D3E22E3DBA9500DB14C3 /* LocationView.swift */; };
 		4BBC588226EF9124008B623D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC588126EF9124008B623D /* AppDelegate.swift */; };
 		4BBC588426EF9124008B623D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC588326EF9124008B623D /* SceneDelegate.swift */; };
 		4BBC588B26EF9125008B623D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC588A26EF9125008B623D /* Assets.xcassets */; };
@@ -57,7 +57,7 @@
 		4035D3D92E3D5C3B00DB14C3 /* RandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser.swift; sourceTree = "<group>"; };
 		4035D3DB2E3D5FDE00DB14C3 /* RandomUserListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserListResult.swift; sourceTree = "<group>"; };
 		4035D3DD2E3D682B00DB14C3 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
-		4035D3E02E3D96E600DB14C3 /* UserListVM+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListVM+Navigation.swift"; sourceTree = "<group>"; };
+		4035D3E22E3DBA9500DB14C3 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		4B6DCA743612DA66D926C575 /* Pods-RandomUsers-RandomUsersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUsers-RandomUsersUITests.release.xcconfig"; path = "Target Support Files/Pods-RandomUsers-RandomUsersUITests/Pods-RandomUsers-RandomUsersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4BBC587E26EF9124008B623D /* RandomUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBC588126EF9124008B623D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +130,7 @@
 		4035D3262E3D267C00DB14C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4035D3E22E3DBA9500DB14C3 /* LocationView.swift */,
 				4035D3DD2E3D682B00DB14C3 /* UserTableViewCell.swift */,
 				4035D3D62E3D2ADB00DB14C3 /* UserListViewControllerView.swift */,
 			);
@@ -139,7 +140,6 @@
 		4035D3272E3D268000DB14C3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				4035D3DF2E3D96E100DB14C3 /* Helpers */,
 				4035D3282E3D269D00DB14C3 /* UserListViewModel.swift */,
 			);
 			path = Presentation;
@@ -152,14 +152,6 @@
 				4035D3D92E3D5C3B00DB14C3 /* RandomUser.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		4035D3DF2E3D96E100DB14C3 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				4035D3E02E3D96E600DB14C3 /* UserListVM+Navigation.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		4262AD90331CD968CF8B41DA /* Frameworks */ = {
@@ -287,6 +279,7 @@
 				4BBC587B26EF9124008B623D /* Frameworks */,
 				4BBC587C26EF9124008B623D /* Resources */,
 				5EEC77B63E063160CC9BD377 /* [CP] Embed Pods Frameworks */,
+				40F51DBCDCF2C06CEDB4DAD6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -325,6 +318,7 @@
 				4BBC589C26EF9125008B623D /* Frameworks */,
 				4BBC589D26EF9125008B623D /* Resources */,
 				672A8AEE5DDFEB4CED31E2D1 /* [CP] Embed Pods Frameworks */,
+				4AC30DF0662684765999881D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -425,6 +419,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40F51DBCDCF2C06CEDB4DAD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RandomUsers/Pods-RandomUsers-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RandomUsers/Pods-RandomUsers-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RandomUsers/Pods-RandomUsers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AC30DF0662684765999881D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RandomUsers-RandomUsersUITests/Pods-RandomUsers-RandomUsersUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RandomUsers-RandomUsersUITests/Pods-RandomUsers-RandomUsersUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RandomUsers-RandomUsersUITests/Pods-RandomUsers-RandomUsersUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5EEC77B63E063160CC9BD377 /* [CP] Embed Pods Frameworks */ = {
@@ -528,9 +564,9 @@
 				4BBC58C026EF9342008B623D /* UserServices.swift in Sources */,
 				4035D3292E3D26A100DB14C3 /* UserListViewModel.swift in Sources */,
 				4BBC58CB26EF95AF008B623D /* UserProvider.swift in Sources */,
-				4035D3E12E3D96EA00DB14C3 /* UserListVM+Navigation.swift in Sources */,
 				4BBC58C526EF953A008B623D /* UserProviderProtocol.swift in Sources */,
 				4BBC588226EF9124008B623D /* AppDelegate.swift in Sources */,
+				4035D3E32E3DBA9C00DB14C3 /* LocationView.swift in Sources */,
 				4BBC588426EF9124008B623D /* SceneDelegate.swift in Sources */,
 				4035D3DA2E3D5C3F00DB14C3 /* RandomUser.swift in Sources */,
 			);

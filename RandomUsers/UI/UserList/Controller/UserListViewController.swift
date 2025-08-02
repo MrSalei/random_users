@@ -150,9 +150,26 @@ extension UserListViewController: UITableViewDataSource, UITableViewDelegate {
             animated: true
         )
         
-        viewModel.navigateToLocation(
-            of: indexPath.row
+        guard indexPath.row >= 0 && indexPath.row < viewModel.storedUsers.count else {
+            return
+        }
+        
+        let model = viewModel.storedUsers[indexPath.row]
+        
+        guard
+            let latitude = Double(model.coordinates.latitude),
+            let longitude = Double(model.coordinates.longitude)
+        else {
+            return
+        }
+        
+        let mapView = LocationView(
+            latitude: latitude,
+            longitude: longitude,
+            frame: contentView.bounds
         )
+        
+        contentView.addSubview(mapView)
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

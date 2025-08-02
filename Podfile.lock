@@ -1,5 +1,10 @@
 PODS:
   - Alamofire (4.9.1)
+  - GoogleMaps (8.4.0):
+    - GoogleMaps/Maps (= 8.4.0)
+  - GoogleMaps/Base (8.4.0)
+  - GoogleMaps/Maps (8.4.0):
+    - GoogleMaps/Base
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
@@ -11,22 +16,25 @@ PODS:
   - SDWebImage/Core (5.21.1)
 
 DEPENDENCIES:
+  - GoogleMaps
   - Moya (~> 13.0.1)
   - SDWebImage
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - GoogleMaps
     - Moya
     - Result
     - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  GoogleMaps: 8939898920281c649150e0af74aa291c60f2e77d
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SDWebImage: f29024626962457f3470184232766516dee8dfea
 
-PODFILE CHECKSUM: 322f866f5e6c7f5b9cbae3d9467a1914a68d6c5f
+PODFILE CHECKSUM: 48b19e3ef235dcdf8097b0df12eddbdfb0067b56
 
 COCOAPODS: 1.15.2
